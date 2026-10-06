@@ -51,4 +51,3 @@ Simplified model: isolated margin, one flat maintenance margin rate, the same fe
 
 ---
 
-Built with AI assistance.
