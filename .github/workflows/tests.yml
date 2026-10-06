@@ -1,0 +1,20 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Example runs
+        run: |
+          python -m perprisk --side long --entry 60000 --stop 58800 --equity 10000 --risk-pct 1 --leverage 10 --take-profit 63600 --lot-step 0.001 --funding-rate 0.0001 --hours 24
+          python -m perprisk --side long --entry 60000 --stop 58800 --equity 10000 --risk-pct 1 --leverage 50
