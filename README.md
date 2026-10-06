@@ -49,5 +49,3 @@ Try the same trade with `--leverage 50`. The estimated liquidation (≈ 59,100) 
 
 Simplified model: isolated margin, one flat maintenance margin rate, the same fee on entry and exit. Real exchanges use tiered maintenance margin, liquidation fees and the mark price, so **always compare the liquidation estimate with your exchange's own figure**. Gaps and slippage can make a real loss bigger than planned.
 
----
-
